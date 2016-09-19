@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/main-style.css" rel="stylesheet" />
+    <link href="assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
+   </head>
+<body>
+
+<!-- MODAL User Profile  -->
+        <div class="modal fade" id="modal-user-profile" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="modal-header" style="background:#444;color:#fff">
+                        <button type="button" class="close" data-dismiss="modal" style="color:#fff">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                        <h3 class="modal-title" id="modal-prile-label">User Profile</h3>
+                        
+                    </div>
+                    
+                    <div class="modal-body">
+                        
+                       
+                            <br>
+                            <form>
+                                <table class="table">
+                                    <tbody>
+                                      <tr styel="border:none;">
+                                        <td>John</td>
+                                        <td>john@example.com</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Mary</td>
+                                        <td>mary@example.com</td>
+                                      </tr>
+                                      <tr>
+                                        <td>July</td>
+                                        <td>july@example.com</td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+                         </form>
+                     
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+  <!--  Modals User Profile endz .....->
+
+    <!-- MODAL Add  time Table Form -->
+        <div class="modal fade" id="modal-timetable-add" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" style="color:#fff">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                        <h3 class="modal-title" id="modal-register-label">Time Table</h3>
+                        
+                    </div>
+                    
+                    <div class="modal-body">
+                        
+                        <form>
+                            <table id="add-timetable">
+                                <tr> 
+                                    <div class="form-group">
+                                        <td>
+                                            <label for="sel1">Select User-email:</label>
+                                        </td>
+                                        <td>
+                                            <select class="form-control" id="sel1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            </select>
+                                        </td>
+                                    </div>
+                                </tr>
+                                <tr> 
+                                    <div class="form-group">
+                                        <td>
+                                            <label for="sel1">Select department:</label>
+                                        </td>
+                                        <td>
+                                            <select class="form-control" id="sel1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            </select>
+                                        </td>
+                                    </div>
+                                </tr>
+                                    <tr> 
+                                    <div class="form-group">
+                                        <td>
+                                            <label for="sel1">Select stream:</label>
+                                        </td>
+                                        <td>
+                                            <select class="form-control" id="sel1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            </select>
+                                        </td>
+                                    </div>
+                                </tr>
+                                <tr> 
+                                    <div class="form-group">
+                                        <td>
+                                            <label for="sel1">Select Semester:</label>
+                                        </td>
+                                        <td>
+                                            <select class="form-control" id="sel1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            </select>
+                                        </td>
+                                    </div>
+                                </tr>
+                                <tr> 
+                                    <div class="form-group">
+                                        <td>
+                                            <label for="sel1">Select Subject:</label>
+                                        </td>
+                                        <td>
+                                            <select class="form-control" id="sel1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            </select>
+                                        </td>
+                                    </div>
+                                </tr>         
+                            </table><br>
+                             <button type="submit" class="btn btn-success">Add</button>
+                         </form>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+  <!--  Modals Add Time Table endzzz.....->
+
+    <!-- MODAL Login Form -->
+        <div class="modal fade modal-log" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="modal-header" style="background:#444;color:#fff">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                        <h3 class="modal-title text-center" id="modal-register-label"><i class="fa fa-sign-in"></i>  Log In</h3>
+                    </div>
+                    
+                    <div class="modal-body">
+                        
+                        <form role="form" action="" method="post" class="registration-form">
+                            
+                            <div class="form-group">
+                                <label class="sr-only" for="form-name">Name</label>
+                                <input type="text" name="form-name" placeholder="User name..." class="form-name form-control" id="form-name">
+                            </div>
+                           
+                            <div class="form-group">
+                                <label class="sr-only" for="form-contact">Contact</label>
+                                <input type="text" name="form-contact" placeholder="Contact..." class="form-contact form-control" id="form-contact">
+                            </div>
+    
+                            <button type="submit" class="btn btn-success">Login</button>
+                        </form>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+  <!--  Modals Login Form endz -->
+
+
+  <!-- MODAL signup Form -->
+        <div class="modal fade" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="modal-header" style="background:#444;color:#fff">
+                        <button type="button" class="close" data-dismiss="modal" style="color:#fff">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                        <h3 class="modal-title" id="modal-register-label">Sign up now</h3>
+                        
+                    </div>
+                    
+                    <div class="modal-body">
+                        
+                        <form role="form" action="" method="post" class="registration-form">
+                            <div class="form-group">
+                                  <label class="sr-only" for="form-department-name">Department Name</label>
+                                  <select class="form-control">
+                                    <option>select Department</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                  </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-name">Name</label>
+                                <input type="text" name="form-name" placeholder="User name..." class="form-name form-control" id="form-name">
+                            </div>
+                            <div class="form-group">
+                                  <label class="sr-only" for="form-gender">Gender</label>
+                                  <select class="form-control">
+                                    <option>Gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                  </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-contact">Contact</label>
+                                <input type="text" name="form-contact" placeholder="Contact..." class="form-contact form-control" id="form-contact">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-qualification">Qualification</label>
+                                <input type="text" name="form-qualification" placeholder="Qualification..." 
+                                            class="form-qualification form-control" id="form-qualification">
+                            </div>
+                            <button type="submit" class="btn btn-success">Sign up</button>
+                        </form>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+  <!--  Modals signup Form endz -->
+
+    <!--  wrapper -->
+    <div id="wrapper">
+        <!-- navbar top -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+            <!-- navbar-header -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo.png" alt="" />
+                </a>
+            </div>
+            <!-- end navbar-header -->
+            <!-- navbar-top-links -->
+            <ul class="nav navbar-top-links navbar-right">
+                <!-- main dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-3x"></i>
+                    </a>
+                    <!-- dropdown user-->
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#" data-toggle="modal" data-target="#modal-user-profile"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                        </li>
+                        <li><a href="login.html" data-toggle="modal" data-target="#modal-login"><i class="fa fa-sign-out fa-fw"></i>Login</a>
+                        </li>
+                        <li><a href="login.html" data-toggle="modal" data-target="#modal-register"><i class="fa fa-sign-out fa-fw"></i>Sign Up</a>
+                        </li>
+                    </ul>
+                    <!-- end dropdown-user -->
+                </li>
+                <!-- end main dropdown -->
+            </ul>
+            <!-- end navbar-top-links -->
+        </nav>
+        <!-- end navbar top -->
+        <!-- navbar side -->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <!-- sidebar-collapse -->
+            <div class="sidebar-collapse">
+                <!-- side-menu -->
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <!-- user image section-->
+                        <div class="user-section">
+                            <div class="user-section-inner">
+                                <img src="assets/img/user.jpg" alt="">
+                            </div>
+                            <div class="user-info">
+                                <div>Jonny <strong>Deen</strong></div>
+                                <div class="user-text-online">
+                                    <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
+                                </div>
+                            </div>
+                        </div>
+                        <!--end user image section-->
+                    </li>
+                    <li class="selected">
+                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#modal-timetable-add"><i class="fa fa-building-o fa-fw"></i> Add</a>
+                    </li>
+                     <li>
+                        <a href="timeline.html"><i class="fa fa-building-o fa-fw"></i>CSE Departement</a>
+                    </li>
+                    <li>
+                        <a href="tables.html"><i class="fa fa-building-o fa-fw"></i>MEC Departement</a>
+                    </li>
+                    <li>
+                        <a href="forms.html"><i class="fa fa-building-o fa-fw"></i>HM Departement</a>
+                    </li>
+                </ul>
+                <!-- end side-menu -->
+            </div>
+            <!-- end sidebar-collapse -->
+        </nav>
+        <!-- end navbar side -->
+        <!--  page-wrapper -->
+        <div id="page-wrapper">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Dashboard</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Welcome -->
+                <div class="col-lg-12">
+                    <div class="alert alert-info">
+                        <i class="fa fa-folder-open"></i><b>&nbsp;Hello ! </b>Welcome Back <b>Jonny Deen </b>
+                        <i class="fa  fa-pencil"></i><b>&nbsp;2,000 </b>Support Tickets Pending to Answere. nbsp;
+                    </div>
+                </div>
+                <!--end  Welcome -->
+            </div>
+            <div class="row">
+                <div class="col-md-7 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 mainnnn leftoo">
+                    <div class="col-xs-12 maindetail">
+                        <div class="col-xs-4 headbord">Name</div>
+                        <div class="col-xs-4 headbord">Apply Leave</div>
+                        <div class="col-xs-4 headbord">Action</div>
+                    </div>
+
+                    <div class="col-xs-12 maindetail">
+                        <div class="col-xs-4 detailll">Surinder</div>
+                        <div class="col-xs-4 detailll">22/06/2016</div>
+                        <div class="col-xs-4 vieww">
+                           <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">View Timetable</button>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="col-md-10 col-md-offset-1 col-xs-12  mainmodalbox">
+                        <!-- Modal content-->
+                            <div class="modal-content mainmodelscroll" style="margin-top:100px;">
+                                <div class="modal-header">
+                                    <strong>DETAIL OF THE TEACHER'S WHO WANT LEAVE</strong> 
+                                </div>
+                                <div class="modal-body" style="padding:10px;border-bottom:1px solid rgba(0,0,0,0.1);">
+                                     <strong>MR. SURINDER GIRI</strong>
+                                </div>
+                                <table class="table">
+                                    <thead id="tblHead">
+                                         <tr>
+                                            <td style="font-weight:bold;">Subjects</td>
+                                         </tr>
+                                    </thead>
+                                    <tbody style="border-bottom:1px solid rgba(0,0,0,0.1);">
+                                          <tr>
+                                            <td class="sub">Hindi</td>
+                                            <td class="sub">English</td>
+                                            <td class="sub">Hindi</td>
+                                            <td class="sub">English</td>
+                                            <td class="sub">Hindi</td>
+                                            <td class="sub">English</td>
+                                            <td class="sub">Hindi</td>
+                                            <td class="sub">English</td>
+                                            <td class="subs">English</td>
+                                          </tr>
+                                    </tbody>
+                                </table>
+                                <div class="modal-header" style="padding:10px;">
+                                    <strong>ADJUSTEMENT OF THE TEACHER'S</strong> 
+                                </div>
+                                <table class="table" id="tblGrid">
+                                    <thead id="tblHead">
+                                      <tr>
+                                        <th>TEACHER NAME</th>
+                                        <th>PERIODS</th>
+                                        <th class="text-right">ACTION</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Manjit Singh</td>
+                                           <td>3</td>
+                                           <td class="text-right"><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Adjust</button></td>
+                                        </tr>
+                                        <tr><td>Surinder Giri</td>
+                                            <td>5</td>
+                                            <td class="text-right"><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Adjust</button></td>
+                                        </tr>
+                                        <tr><td>Sunny Bindra</td>
+                                            <td>10</td>
+                                            <td class="text-right"><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Adjust</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xs-12 maindetail">
+                        <div class="col-xs-4 detailll">Maninder</div>
+                        <div class="col-xs-4 detailll">22/06/2016</div>
+                        <div class="col-xs-4 vieww">
+                           <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">View Timetable</button>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="col-md-10 col-md-offset-1 col-xs-12  mainmodalbox">
+                        <!-- Modal content-->
+                            <div class="modal-content mainmodelscroll" style="margin-top:100px;">
+                                <div class="modal-header">
+                                    <strong>DETAIL OF THE TEACHER'S WHO WANT LEAVE</strong> 
+                                </div>
+                                <div class="modal-body" style="padding:10px;border-bottom:1px solid rgba(0,0,0,0.1);">
+                                     <strong>MR. SURINDER GIRI</strong>
+                                </div>
+                                <table class="table">
+                                    <thead id="tblHead">
+                                         <tr>
+                                            <td style="font-weight:bold;">Subjects</td>
+                                         </tr>
+                                    </thead>
+                                    <tbody style="border-bottom:1px solid rgba(0,0,0,0.1);">
+                                          <tr>
+                                            <td class="sub">Hindi</td>
+                                            <td class="sub">English</td>
+                                            <td class="sub">Hindi</td>
+                                            <td class="sub">English</td>
+                                            <td class="sub">Hindi</td>
+                                            <td class="sub">English</td>
+                                            <td class="sub">Hindi</td>
+                                            <td class="sub">English</td>
+                                            <td class="subs">English</td>
+                                          </tr>
+                                    </tbody>
+                                </table>
+                                <div class="modal-header" style="padding:10px;">
+                                    <strong>ADJUSTEMENT OF THE TEACHER'S</strong> 
+                                </div>
+                                <table class="table" id="tblGrid">
+                                    <thead id="tblHead">
+                                      <tr>
+                                        <th>TEACHER NAME</th>
+                                        <th>PERIODS</th>
+                                        <th class="text-right">ACTION</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Manjit Singh</td>
+                                           <td>3</td>
+                                           <td class="text-right"><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Adjust</button></td>
+                                        </tr>
+                                        <tr><td>Surinder Giri</td>
+                                            <td>5</td>
+                                            <td class="text-right"><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Adjust</button></td>
+                                        </tr>
+                                        <tr><td>Sunny Bindra</td>
+                                            <td>10</td>
+                                            <td class="text-right"><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Adjust</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xs-12 maindetail">
+                        <div class="col-xs-4 detailll">Sunny</div>
+                        <div class="col-xs-4 detailll">22/06/2016</div>
+                        <div class="col-xs-4 vieww">
+                           <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">View Timetable</button>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="col-md-10 col-md-offset-1 col-xs-12  mainmodalbox">
+                        <!-- Modal content-->
+                            <div class="modal-content mainmodelscroll" style="margin-top:100px;">
+                                <div class="modal-header">
+                                    <strong>DETAIL OF THE TEACHER'S WHO WANT LEAVE</strong> 
+                                </div>
+                                <div class="modal-body" style="padding:10px;border-bottom:1px solid rgba(0,0,0,0.1);">
+                                     <strong>MR. SURINDER GIRI</strong>
+                                </div>
+                                <table class="table">
+                                    <thead id="tblHead">
+                                         <tr>
+                                            <td style="font-weight:bold;">Subjects</td>
+                                         </tr>
+                                    </thead>
+                                    <tbody style="border-bottom:1px solid rgba(0,0,0,0.1);">
+                                          <tr>
+                                            <td class="sub">Hindi</td>
+                                            <td class="sub">English</td>
+                                            <td class="sub">Hindi</td>
+                                            <td class="sub">English</td>
+                                            <td class="sub">Hindi</td>
+                                            <td class="sub">English</td>
+                                            <td class="sub">Hindi</td>
+                                            <td class="sub">English</td>
+                                            <td class="subs">English</td>
+                                          </tr>
+                                    </tbody>
+                                </table>
+                                <div class="modal-header" style="padding:10px;">
+                                    <strong>ADJUSTEMENT OF THE TEACHER'S</strong> 
+                                </div>
+                                <table class="table" id="tblGrid">
+                                    <thead id="tblHead">
+                                      <tr>
+                                        <th>TEACHER NAME</th>
+                                        <th>PERIODS</th>
+                                        <th class="text-right">ACTION</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Manjit Singh</td>
+                                           <td>3</td>
+                                           <td class="text-right"><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Adjust</button></td>
+                                        </tr>
+                                        <tr><td>Surinder Giri</td>
+                                            <td>5</td>
+                                            <td class="text-right"><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Adjust</button></td>
+                                        </tr>
+                                        <tr><td>Sunny Bindra</td>
+                                            <td>10</td>
+                                            <td class="text-right"><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Adjust</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end page-wrapper -->
+    </div>
+    <!-- end wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="assets/plugins/pace/pace.js"></script>
+    <script src="assets/scripts/siminta.js"></script>
+    <!-- Page-Level Plugin Scripts-->
+    <script src="assets/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/plugins/morris/morris.js"></script>
+    <script src="assets/scripts/dashboard-demo.js"></script>
+
+</body>
+
+</html>
